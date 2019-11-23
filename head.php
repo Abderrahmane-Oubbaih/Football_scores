@@ -32,7 +32,7 @@
 
      <header id="header">
 <!-- Logo -->
-    <img src="\Images\LogoSite\Logo.png"  alt="Logo" alt="Bootstrap" class="mx-auto" id="logo">  
+    <img src="..\Images\LogoSite\Logo.png"  alt="Logo" alt="Bootstrap" class="mx-auto" id="logo">  
       
            
 
@@ -73,14 +73,6 @@
 
 
 
+    </br>
     
-    <!-- Les Buutons demain hier aujourdHui -->
-    <section class="banner">
-        <div class="table-responsive" id="tab">
-            <table class="table" border=10 >
-              <tr>
-                <th id="changeth" class="tailleTr"><a id="changea" href="hier.php">Hier</a></th>
-                <th id="changeth" class="tailleTr"><a id="changea" href="aujourdhui.php">Ajourd'hui</a></th>
-                <th id="changeth" class="tailleTr"><a id="changea" href="demain.php">Demain</a></th>
-              </tr>
-        </table>
+   
