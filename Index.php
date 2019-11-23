@@ -29,16 +29,16 @@
 
   <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
   
-  <img src="/Images/Logos/Laligue.png"  class="mx-auto d-block" id="imgLogoligue">
+  <img src="Images/Logos/Laligue.png"  class="mx-auto d-block" id="imgLogoligue">
 
 <table class="table" border=10>
 <tr>
   <th colspan=3> <h4 class="etat">Etat de matche</h4> </th>
  </tr>
  <tr>
-     <th><img class="imgLogo" src="../Images/Logos/bordeaux.png"></th>
+     <th><img class="imgLogo" src="Images/Logos/bordeaux.png"></th>
      <th> <h2 class="vs">Vs</h2></th>
-     <th><img class="imgLogo"  src="../Images/Logos/bordeaux.png"></th>
+     <th><img class="imgLogo"  src="Images/Logos/bordeaux.png"></th>
  </tr>
 
  <tr>
@@ -64,16 +64,16 @@
 
   <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 
-  <img src="/Images/Logos/Laligue.png"  class="mx-auto d-block" id="imgLogoligue">
+  <img src="Images/Logos/Laligue.png"  class="mx-auto d-block" id="imgLogoligue">
 <div>
 <table class="table" border=10 id="centre">
 <tr>
   <th colspan=3> <h4 class="etat">Etat de matche</h4> </th>
  </tr>
  <tr style="padding: 0;">
-     <th><img class="imgLogo" src="../Images/Logos/bordeaux.png"></th>
+     <th><img class="imgLogo" src="Images/Logos/bordeaux.png"></th>
      <th> <h2 class="vs">Vs</h2></th>
-     <th><img class="imgLogo"  src="../Images/Logos/bordeaux.png"></th>
+     <th><img class="imgLogo"  src="Images/Logos/bordeaux.png"></th>
  </tr>
 
  <tr>
@@ -98,7 +98,7 @@
 
 <!-- Pour demain -->
   <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-  <img src="/Images/Logos/Laligue.png"  class="mx-auto d-block" id="imgLogoligue">
+  <img src="Images/Logos/Laligue.png"  class="mx-auto d-block" id="imgLogoligue">
 
 <table class="table" border=10>
 <tr>
@@ -109,14 +109,14 @@
 
  </tr>
  <tr>
-     <th><img class="imgLogo" src="../Images/Logos/bordeaux.png"></th>
+     <th><img class="imgLogo" src="Images/Logos/bordeaux.png"></th>
      <th> 
          
          
               <h2 class="vs">Vs</h2></th>
         
    
-     <th><img class="imgLogo"  src="../Images/Logos/bordeaux.png"></th>
+     <th><img class="imgLogo"  src="Images/Logos/bordeaux.png"></th>
  </tr>
 
  <tr>
