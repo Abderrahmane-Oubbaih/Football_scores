@@ -32,7 +32,7 @@
 
      <header id="header">
 <!-- Logo -->
-    <img src="..\Images\LogoSite\Logo.png"  alt="Logo" alt="Bootstrap" class="mx-auto" id="logo">  
+    <img src="\Images\LogoSite\Logo.png"  alt="Logo" alt="Bootstrap" class="mx-auto" id="logo">  
       
            
 
