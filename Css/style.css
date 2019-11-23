@@ -87,6 +87,9 @@ th a{
   color:#0060c8;
   text-align: center;
 }
+.tailleTr{
+  width:33%; 
+}
 /* Le matche */
 .etat{
   color:red;
