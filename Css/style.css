@@ -75,37 +75,3 @@ li:hover{
   font-size: 25px;
   background-color: aliceblue;
 }
-/* Le matche */
-.etat{
-  color:red;
-}
-.etat1{
-  color: green;
-}
-.vs{
-  color:yellow;
-  font-size: 50px;
-  margin-top: 90px;
-}
-.imgLogo{
-  width:150px;
-  right:150px;
-}
-.lesequipes{
-  color:white;
-}
-.resu{
-  color:yellow;
-  font-size:60px;
-}
-.twop{
-  color:yellow;
-  font-size:40px;
-}
-table{
-  text-align: center;
-}
-#imgLogoligue{
-  width:140px;
-  right:140px;
-}
