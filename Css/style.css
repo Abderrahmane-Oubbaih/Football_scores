@@ -75,3 +75,18 @@ li:hover{
   font-size: 25px;
   background-color: aliceblue;
 }
+#navjour{
+    background-color:#DFF2F8;
+    border: 1px solid #1f7810;    
+    font-size:18px;
+}
+#navjour:hover{
+    background-color:#92F98F;
+}
+#pasmatch{
+    text-align:center;
+    font-size:30px;
+    color:red;
+    font-weight: bold;
+    font-family: cursive;
+}

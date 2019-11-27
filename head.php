@@ -20,12 +20,12 @@
 
 
 
-    <!-- loading Page -->
+     
     <div id="loader">
      <img src="Loading.gif" class="loader">
 
     </div>
-
+ 
 
 
 
@@ -65,14 +65,14 @@
          
         </div>
       </nav>
-     
-    
         </div>
-        
+         
     </header>
+ 
+<br>
+    
 
-
-
-    </br>
+    </body>
+</html>
     
    

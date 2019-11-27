@@ -19,13 +19,15 @@ class Match
     private $winner;
     
     
-    public function __construct($homeTeam,$awayTeam,$status,$homeTeamScore,$awayTeamScore,$_date,$_time,$competition,$winner)
+    public function __construct($homeTeam,$awayTeam,$status,$homeTeamLogo,$awayTeamLogo,$homeTeamScore,$awayTeamScore,$_date,$_time,$competition,$winner)
     {
         $this->homeTeam = $homeTeam;
         $this->awayTeam = $awayTeam;
         $this->homeTeamScore = $homeTeamScore;
         $this->awayTeamScore = $awayTeamScore;
         $this->status = $status;
+        $this->homeTeamLogo = $homeTeamLogo;
+        $this->awayTeamLogo = $awayTeamLogo;
         $this->_date = $_date;
         $this->_time = $_time;
         $this->competition = $competition;
@@ -39,7 +41,7 @@ class Match
     
     public function getHomeTeam()
     {
-        return $this->homTeam;
+        return $this->homeTeam;
     }
     
     public function getAwayTeam()
