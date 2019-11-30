@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 29 nov. 2019 à 18:28
+-- Généré le :  sam. 30 nov. 2019 à 04:57
 -- Version du serveur :  10.4.8-MariaDB
 -- Version de PHP :  7.1.33
 
@@ -40,6 +40,29 @@ CREATE TABLE `tbl_competition` (
 
 INSERT INTO `tbl_competition` (`Id`, `Name`, `Logo`) VALUES
 (1, 'Ligue 1', 'https://www.up-00.com/i/00147/kjh0kze74b00.png');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `tbl_inscription`
+--
+
+CREATE TABLE `tbl_inscription` (
+  `Id` int(11) NOT NULL,
+  `Name` varchar(50) NOT NULL,
+  `Last_name` varchar(50) NOT NULL,
+  `Equipe` varchar(50) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `tbl_inscription`
+--
+
+INSERT INTO `tbl_inscription` (`Id`, `Name`, `Last_name`, `Equipe`, `Email`, `Password`) VALUES
+(1, 'test1', 'test1', 'test1', 'test1', 'test1'),
+(2, 'test1', 'test1', 'test1', 'test1', 'test1');
 
 -- --------------------------------------------------------
 
@@ -90,10 +113,26 @@ ALTER TABLE `tbl_competition`
   ADD PRIMARY KEY (`Id`);
 
 --
+-- Index pour la table `tbl_inscription`
+--
+ALTER TABLE `tbl_inscription`
+  ADD PRIMARY KEY (`Id`);
+
+--
 -- Index pour la table `tbl_team`
 --
 ALTER TABLE `tbl_team`
   ADD PRIMARY KEY (`Id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `tbl_inscription`
+--
+ALTER TABLE `tbl_inscription`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
