@@ -6,8 +6,9 @@
 </head>
 <body>
 <div class="login-box">
-	
+	<form action="#">
 <h1>Login :</h1>
+
 <div class="textbox">
 	<i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
 	<input type="text" name="" value="" placeholder="UserName">
@@ -19,7 +20,8 @@
 </div>
 <input class="btn" type="button" name="" value="Sign in">
 <br>
-<p>you dont have account <a href="Login/Inscription_Login.php">Sign Up</a> </p>
+<p> if you don't have account &ensp; <a href="Login/Inscription_Login.php" >  Sign Up</a> </p>
+</form>
 </div>
 </body>
 </html>
