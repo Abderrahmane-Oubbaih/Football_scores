@@ -50,10 +50,10 @@
               <a class="nav-link text-success" href="index.php">Accueil <span  class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-success" href="#">test</a> 
+              <a class="nav-link text-success" href="SignIn.php">Sign In</a> 
             </li>
             <li class="nav-item">
-              <a class="nav-link text-success" href="#">Test2</a>
+              <a class="nav-link text-success" href="Login/Inscription_Login.php">Sign Up</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-success" href="#">test3</a>
@@ -63,7 +63,7 @@
             </li>
           </ul>
          
-        </div>
+        </div>s
       </nav>
         </div>
          
