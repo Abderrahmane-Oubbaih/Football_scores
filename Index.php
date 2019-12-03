@@ -199,7 +199,24 @@ style="text-align:center;
             
            </div>
            
-          
+          <?php 
+        if($arrMatch[$i]->getStatus()=="SCHEDULED")
+        {
+            echo'<div class="row align-items-center">'; 
+             echo'<div class="col-3  text-center">';  
+                  echo'<button class="btn-primary">Vote for</button>';
+               echo"</div>";
+               echo'<div class="col-6 text-center">';
+                   
+               echo"</div>";
+            echo'<div class="col-3 text-center">';   
+               echo'<button class="btn-primary">Vote for</button>';
+        echo"</div>";       
+            
+           echo"</div>";
+        }
+            
+           ?>
            
           </div>
           <?php
