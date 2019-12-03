@@ -79,7 +79,7 @@ function getMatch($matchDay,$status)
                
                 try
             {
-                $bdd = new PDO('mysql:host=localhost;dbname=football_scores;charset=utf8','root','');    
+                $bdd = new PDO('mysql:host=localhost;dbname=bd_football_scores_v2;charset=utf8','root','');    
             }
             catch(Exception $e)
             {
