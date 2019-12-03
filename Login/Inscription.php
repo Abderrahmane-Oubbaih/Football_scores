@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "", "bd_football_scores");
+$link = mysqli_connect("localhost", "root", "", "bd_football_scores_v2");
  $nOm =$_POST['name'];
 $lAstName = $_POST['lastname'];
 $eQuipe = $_POST['equipe'];
