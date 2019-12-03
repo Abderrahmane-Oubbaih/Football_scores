@@ -19,7 +19,7 @@
 			<div class="form-right">
 				<div class="tab">
 					<div class="tab-inner">
-						<button class="tablinks" style="color: #08F56C; text-decoration: underline;  text-decoration-color:white; padding-top: -10px;">Inscrevez Vous C'est Gratuit !</button>
+						<button class="tablinks" style="color: #08F56C; text-decoration: underline;  text-decoration-color:white; padding-top: -10px;">Inscrivez vous C'est gratuit</button>
 					</div>
 			
 				</div>
