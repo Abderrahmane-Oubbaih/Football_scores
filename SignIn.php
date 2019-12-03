@@ -22,7 +22,7 @@ if(isset($_POST['btnsignin'])) {
             $_SESSION['Last_name'] = $userinfo['Last_name'];
             $_SESSION['Id'] = $userinfo['Id'];
 
-            header("Location: head.php?id=".$_SESSION['Id']."&lastName=". $_SESSION['Last_name']."&name=".$_SESSION['Name']);
+            header("Location: index.php?id=".$_SESSION['Id']."&lastName=". $_SESSION['Last_name']."&name=".$_SESSION['Name']);
 
          } else 
          {
