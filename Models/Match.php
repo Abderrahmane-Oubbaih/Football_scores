@@ -89,21 +89,26 @@ class Match
     {
         return $this->competition;
     }
-    pulic function GetMatchForAllCompetitionAndForChosenDate($Date)
+    public function __toString()
+    {
+        return  $this->id . " " .$this->homeTeam." ".$this->awayTeam ." ". $this->homeTeamLogo
+        ." ". $this->awayTeamLogo." ".$this->homeTeamScore." ".$this->awayTeamScore." ".$this->status." ".$this->_date." ".$this->_time." ".$this->winner." ".$this->competition;
+    }
+   public function getMatchForAllCompetitionAndForChosenDate($Date)
     {
             
             $Date;
-            $All{"2015","id2","id3","id4","id5","id6","id7","id8"};
+            $All=[2015,2003,2015,2003,2003,2003,2003,2015];
             
                 
             // la date d'aujourd'hui formaté au format accépté par le service web pour le filtre
             $api_key = '66485d1780504493a4cfc5527ac4d4c4'; // la clé de sécurité permettant de consommer le service web
             $headers = array('X-Auth-Token: '.$api_key); 
             // initialisation de la bibliothéque curl avec l'url de l'api et le query_string paramétré
-            for(int $i=0; $i<$All["count"];$i++)
-    {
-            $curl = curl_init("http://api.football-data.org/v2/competitions/".$All[$i]."/matches?dateFrom=".$matchDate."&dateTo=".$matchDate);
-    }
+            for( $i=0; $i<Count($All);$i++)
+               {
+            $curl = curl_init("http://api.football-data.org/v2/competitions?competitionId=".$All[$i]."/matches?dateFrom=".$matchDate."&dateTo=".$matchDate);
+               
             curl_setopt($curl,CURLOPT_SSL_VERIFYPEER,false);
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -138,7 +143,7 @@ class Match
                        
                         try
                     {
-                        $bdd = new PDO('mysql:host=localhost;dbname=bd_football_scores_v2;charset=utf8','root','');    
+                        $bdd = new PDO('mysql:host=localhost;dbname=football_scores_v2;charset=utf8','root','');    
                     }
                     catch(Exception $e)
                     {
@@ -179,37 +184,16 @@ class Match
         
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-    pulic function GetMatchForChosenCompetitionAndForChosenDate($idCompetition,$Date)
-    {
-            
-            $Date;
-            $idCompetition;
-            
-                
-            // la date d'aujourd'hui formaté au format accépté par le service web pour le filtre
+// FUNTION 2
+    public function getMatchForChosenCompetitionAndForChosenDate($idCompetition,$Date)
+    { 
+         $id= $idCompetition;
+         $dt=$Date;
+        // la date d'aujourd'hui formaté au format accépté par le service web pour le filtre
             $api_key = '66485d1780504493a4cfc5527ac4d4c4'; // la clé de sécurité permettant de consommer le service web
             $headers = array('X-Auth-Token: '.$api_key); 
             // initialisation de la bibliothéque curl avec l'url de l'api et le query_string paramétré
-            $curl = curl_init("http://api.football-data.org/v2/competitions/idCompetition=".$idCompetition."/matches?dateFrom=".$Date."&dateTo=".$Date);
+            $curl = curl_init("http://api.football-data.org/v2/competitions?competitionId=".$id."/matches?dateFrom=".$dt."?dateTo=".$dt);
             curl_setopt($curl,CURLOPT_SSL_VERIFYPEER,false);
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -244,7 +228,7 @@ class Match
                        
                         try
                     {
-                        $bdd = new PDO('mysql:host=localhost;dbname=bd_football_scores_v2;charset=utf8','root','');    
+                        $bdd = new PDO('mysql:host=localhost;dbname=football_scores_v2;charset=utf8','root','');    
                     }
                     catch(Exception $e)
                     {
@@ -281,35 +265,6 @@ class Match
                 }
                  
             }
-            curl_close($curl);
-        
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-    public function __toString()
-    {
-        return  $this->id . " " .$this->homeTeam." ".$this->awayTeam ." ". $this->homeTeamLogo
-        ." ". $this->awayTeamLogo." ".$this->homeTeamScore." ".$this->awayTeamScore." ".$this->status." ".$this->_date." ".$this->_time." ".$this->winner." ".$this->competition;
-    }
-    
-   
+            curl_close($curl);        }
 }
 ?>
