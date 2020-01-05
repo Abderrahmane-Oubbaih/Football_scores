@@ -24,7 +24,7 @@
 			
 				</div>
 				<!-- Inscription -->
-				<form class="form-detail"  action="Inscription.php" method="post">
+				<form class="form-detail" name="myform"   method="post"  action="Inscription.php" onsubmit="return Validate(this)"   >
 					<div class="tabcontent" id="sign-up">
 						
 
@@ -83,16 +83,59 @@
 							</label>
 						</div>
 						<div class="form-row-last">
-							<input type="submit" name="register" class="register" value="Register"  >
+							<input type="submit" name="register"  class="register" value="Register"   >
+
+
 						</div>
                         
                         
 					</div>
 				</form>
+
 				
 			</div>
 		</div>
 	</div>
 	
-</body>>
+
+
+
+<script>
+function Validate() {
+
+		//var pass =document.form["myform"][""].value;
+		var pwd = document.getElementById("password").value;
+		var confirmation_pwd = document.getElementById("comfirm_password").value;
+		    var mail = document.getElementById("email").value;
+		var confMail = document.getElementById("ComfirmEmail").value;
+//___________________    
+
+if(mail != confMail){
+
+					
+
+						alert("Email Don't Match !")
+						return false;
+					}
+
+else 
+
+
+			
+
+if(pwd != confirmation_pwd){
+
+				alert("password Don't Match !");
+			return false;
+
+			}
+
+
+
+
+}
+
+
+</script>
+</body>
 </html>

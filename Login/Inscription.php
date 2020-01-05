@@ -12,7 +12,7 @@ if($link === false){
 }
  
 // Attempt insert query execution
-$sql = "INSERT INTO `tbl_inscription`(`Id`, `Name`, `Last_name`, `Equipe`, `Email`, `Password`)  VALUES (NULL, '$nOm', '$lAstName', '$eQuipe', '$eMail', '$pAssword')";
+$sql = "INSERT INTO `tbl_users`(`Id`, `Name`, `Last_name`, `Equipe`, `Email`, `Password`)  VALUES (NULL, '$nOm', '$lAstName', '$eQuipe', '$eMail', '$pAssword')";
 if(mysqli_query($link, $sql)){
 
 	// la redirection vers la page login !!!!
