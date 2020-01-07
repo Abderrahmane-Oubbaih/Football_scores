@@ -249,3 +249,73 @@ body {
 		-webkit-flex-direction: column;
 	}
 }
+/*________________ POP-UP___________________________ */
+
+
+.popup{
+  background: rgba(0,0,0,0.5);
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+display: none;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.popup-content{
+height: 550px;
+width: 700px;
+background: white;
+padding: 20px;
+border-radius: 5px;
+position: relative;
+
+
+}
+
+.close{
+position: absolute;
+top: -15px;
+right: -15px;
+background: white;
+height: 20px;
+width: 20px;
+border-radius: 50%;
+box-shadow: 6px 6px 29px -4px rgba(0,0,0.75);
+
+
+}
+ /*________form_popup___________*/
+
+.containerform {
+  width: 500px;
+  height: 400px;
+/*  Pour centrer le contenu d'un bloc  on utilise la prop text-align  */
+  text-align: center; 
+/*  Pour centrer un bloc on doit d'abord préciser le width et utiliser ensuite la prop margin  */
+  margin : auto;
+
+
+}
+
+ input {
+  height: 40px;
+  width: 300px;
+  font-size: 18px;
+  font-family: "Lato";
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding-left: 35px;
+}
+.form-input {
+  position:relative;
+}
+.fa-lock, .fa-user {
+  position:absolute;
+  top: 8px;
+  left: 88px;
+  color:#7F2185;
+}
+

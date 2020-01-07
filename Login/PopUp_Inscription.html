@@ -1,0 +1,485 @@
+
+
+
+
+<!-- By Wassim Fathallah -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Inscription/login</title>
+    <link rel="stylesheet" href="css/style.css"/>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body class="form-v8">
+
+<a href="#" id="popme">POPme</a>
+
+	
+
+<div class="popup">
+	<div class="popup-content">
+
+
+<img src="close.png" alt="Close" class="close">
+
+
+
+
+
+
+
+
+
+  <form name="maform"  method="post"  action="Inscription.php" >
+    <div class="containerform">
+ <img src="bundesliga 2.png" height="90px" width="60px">
+<h2 style="color: #7F2185">Sign up to SCORFOT</h2>
+   <div class="form-input"><i class="fa fa-user fa-2x" aria-hidden="true"></i>
+     <input  type="email" name="email" id="email" required placeholder="Email"style="text-align:center;border: none; border-bottom: 1px solid #7F2185;" />
+ 
+ </div>
+   
+
+  <div class="form-input"><i class="fa fa-lock fa-2x" aria-hidden="true" ></i>
+  
+      <input type="password" name="password" required placeholder="Password" style="text-align:center ;border: none; border-bottom: 1px solid #7F2185;" 
+        />
+
+  </div>
+  <br>
+<div>
+	<select id="slct1" name="slct1" onchange="populate(this.id,'slct2')"style="border: none; color: #7F2185;  border-bottom: 1px solid #7F2185; ">
+ <option value="Competition">Competition</option>
+  <option value="Premier_League">Premier League</option>
+  <option value="UEFA_Champions_League">UEFA Champions League</option>
+  <option value="Bundesliga">Bundesliga</option>
+  <option value="Primeira_Liga">Primeira Liga</option>
+  <option value="Primera_Division">Primera Division</option>
+  <option value="Serie_A">Serie A </option>
+  <option value="European_Championship">European Championship</option>
+  <option value="Eredivisie">Eredivisie </option>
+  <option value="Serie_B">Serie B </option>
+</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<select id="slct2" name="slct2" style="border: none; color: #7F2185; border-bottom: 1px solid #7F2185;">
+ <option value="Team">Team</option>
+</select>
+
+</div>
+
+<br><br><br><br>
+
+<div class="form-row-last">
+ 
+<button type="submit" name="register"  class="register" value="Register"  style="background-color: #7F2185; color: white;border-radius: 12px;width:130px ">
+    <img src="https://image.flaticon.com/icons/svg/61/61457.svg" height="20px" width="20px" > Sign Up
+</button>
+
+</div>
+   <br>
+
+     <h5 style="color: #7F2185;  text-align: right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Already a member ?  <a href="#"> Sign in</a></h5>
+  </div>
+    
+  </form>
+    
+    
+	</div>
+
+
+
+
+</div>
+
+
+
+<script type="text/javascript">
+
+	// this script for unable and desable the POP-UP
+	document.getElementById("popme").addEventListener("click",function(){
+		document.querySelector(".popup").style.display="flex";
+	})
+
+
+
+document.querySelector(".close").addEventListener("click",function(){
+	document.querySelector(".popup").style.display="none";
+})
+// this script for change the values of the combobox
+function populate(s1,s2){
+	var s1 = document.getElementById(s1);
+	var s2 = document.getElementById(s2);
+	s2.innerHTML = "";
+	if(s1.value == "Premier_League"){
+		var optionArray = ["Arsenal FC|Arsenal FC",
+		"Aston Villa FC|Aston Villa FC"
+		,"Chelsea FC|Chelsea FC"
+		,"Everton FC|Everton FC"
+		,"Liverpool FC|Liverpool FC"
+		,"Manchester City FC|Manchester City FC"
+		,"Manchester United FC|Manchester United FC"
+		,"Newcastle United FC|Newcastle United FC"
+		,"Burnley FC|Burnley FC"
+		,"Leicester City FC|Leicester City FC"
+		,"Southampton FC|Southampton FC"
+		,"Watford FC|Watford FC"
+		,"Crystal Palace FC|Crystal Palace FC"
+		,"Sheffield United FC|Sheffield United FC"
+		,"Brighton & Hove Albion FC|Brighton & Hove Albion FC"
+		,"West Ham United FC|West Ham United FC"
+		,"AFC Bournemouth|AFC Bournemouth"
+		
+		];
+	} 
+	else if(s1.value == "UEFA_Champions_League"){
+
+		var optionArray = ["|","Bayer 04 Leverkusen|Bayer 04 Leverkusen"
+		,"BV Borussia 09 Dortmund|BV Borussia 09 Dortmund"
+		,"FC Bayern München|FC Bayern München"
+		,"Chelsea FC|Chelsea FC"
+		,"Liverpool FC|Liverpool FC"
+		,"Manchester City FC|Manchester City FC"
+		,"Tottenham Hotspur FC|Tottenham Hotspur FC"
+		,"Club Atlético de Madrid|Club Atlético de Madrid"
+		,"FC Barcelona|FC Barcelona"
+		,"Real Madrid CF|Real Madrid CF"
+		,"Valencia CF|Valencia CF"
+		,"Atalanta BC|Atalanta BC"
+		,"FC Internazionale Milano|FC Internazionale Milano"
+		,"Juventus FC|Juventus FC"
+		,"SSC Napoli|SSC Napoli"
+		,"FC Porto|FC Porto"
+		,"Lille OSC|Lille OSC"
+		,"Olympique Lyonnais|Olympique Lyonnais"
+		,"Paris Saint-Germain FC|Paris Saint-Germain FC"
+		,"Galatasaray SK|Galatasaray SK"
+		,"Qarabağ Ağdam FK|Qarabağ Ağdam FK"
+		,"PAE Olympiakos SFP|PAE Olympiakos SFP"
+		,"PSV|PSV"
+		,"AFC Ajax|AFC Ajax"
+		,"RB Leipzig|RB Leipzig"
+		,"FC Basel 1893|FC Basel 1893"
+		,"FK Zenit Sankt-Petersburg|FK Zenit Sankt-Petersburg"
+		,"Celtic FC|Celtic FC"
+		,"NK Maribor|NK Maribor"
+		,"FK BATE Borisov|FK BATE Borisov"
+		,"APOEL FC|APOEL FC"
+		,"GNK Dinamo Zagreb|GNK Dinamo Zagreb"
+		,"FK Dynamo Kyiv|FK Dynamo Kyiv"
+		,"Club Brugge KV|Club Brugge KV"
+		,"Rosenborg BK|Rosenborg BK"
+		,"SK Slavia Praha|SK Slavia Praha"
+		,"KRC Genk|KRC Genk"
+		,"BSC Young Boys|BSC Young Boys"
+		,"Dundalk FC|Dundalk FC"
+		,"F91 Diddeleng|F91 Diddeleng"
+		,"FC København|FC København"
+		,"FC Red Bull Salzburg|FC Red Bull Salzburg"
+		,"FC Santa Coloma|FC Santa Coloma"
+		,"FC Sheriff Tiraspol|FC Sheriff Tiraspol"
+		,"FC Viktoria Plzeň|FC Viktoria Plzeň"
+		,"Astana FK|Astana FK"
+		,"FK Shakhtar Donetsk|FK Shakhtar Donetsk"
+		,"Linfield FC|Linfield FC"
+		,"Medipol Başakşehir FK|Medipol Başakşehir FK"
+		,"PFK Ludogorets 1945 Razgrad|PFK Ludogorets 1945 Razgrad"
+		,"Sport Lisboa e Benfica|Sport Lisboa e Benfica"
+		,"The New Saints FC|The New Saints FC"
+		,"LASK Linz|LASK Linz"
+		,"FK Sarajevo|FK Sarajevo"
+		,"Nõmme Kalju FC|Nõmme Kalju FC"
+		,"Helsingin JK|Helsingin JK"
+		,"AIK Fotboll|AIK Fotboll"
+		,"FK Krasnodar|FK Krasnodar"
+		,"FK Lokomotiv Moskva|FK Lokomotiv Moskva"
+		,"FC CFR 1907 Cluj|FC CFR 1907 Cluj"
+		,"GKS Piast Gliwice|GKS Piast Gliwice"
+		,"Valletta FC|Valletta FC"
+		,"FK Sūduva Marijampolė|FK Sūduva Marijampolė"
+		,"Rīga FC|Rīga FC"
+		,"Maccabi Tel Aviv FC|Maccabi Tel Aviv FC"
+		,"KF Valur|KF Valur"
+		,"Ferencvárosi TC|Ferencvárosi TC"
+		,"PAOK FC|PAOK FC"
+		,"Lincoln Red Imps FC|Lincoln Red Imps FC"
+		,"FK Crvena Zvezda|FK Crvena Zvezda"
+		,"FK Sutjeska Nikšić|FK Sutjeska Nikšić"
+		,"KF Shkëndija 79|KF Shkëndija 79"
+		,"FK Partizani|FK Partizani"
+		,"ŠK Slovan Bratislava|ŠK Slovan Bratislava"
+		,"KF Feronikeli|KF Feronikeli"
+		,"SP Tre Penne|SP Tre Penne"
+		,"FC Ararat-Armenia|FC Ararat-Armenia"
+		,"FC Saburtalo|FC Saburtalo"
+		,"HB|HB"
+	
+
+
+		];
+	}
+
+
+
+	 else if(s1.value == "Ligue_1"){
+
+		var optionArray = ["|","Toulouse FC|Toulouse FC","Stade Brestois 29|Stade Brestois 29"
+		,"Olympique de Marseille|Olympique de Marseille"
+		,"Montpellier HSC|Montpellier HSC"
+		,"Lille OSC|Lille OSC"
+		,"OGC Nice|OGC Nice"
+		,"Olympique Lyonnais|Olympique Lyonnais"
+		,"Paris Saint-Germain FC|Paris Saint-Germain FC"
+		,"FC Girondins de Bordeaux|FC Girondins de Bordeaux"
+		,"AS Saint-Étienne|AS Saint-Étienne"
+		,"Dijon Football Côte d'Or|Dijon Football Côte d'Or"
+		,"Stade Rennais FC 1901|Stade Rennais FC 1901"
+		,"Amiens SC|Amiens SC"
+		,"Angers SCO|Angers SCO"
+		,"FC Nantes|FC Nantes"
+		,"FC Metz|FC Metz"
+		,"Stade de Reims|Stade de Reims"
+		,"AS Monaco FC|AS Monaco FC"
+		,"Nîmes Olympique|Nîmes Olympique"
+		,"RC Strasbourg Alsace|RC Strasbourg Alsace"];
+	}
+
+
+
+		else if(s1.value == "Bundesliga"){
+
+		var optionArray = ["|"," FC Köln| FC Köln","TSG 1899 Hoffenheim|TSG 1899 Hoffenheim"
+		,"Bayer 04 Leverkusen|Bayer 04 Leverkusen"
+		,"BV Borussia 09 Dortmund|BV Borussia 09 Dortmund"
+		,"FC Bayern München|FC Bayern München"
+		,"FC Schalke 04|FC Schalke 04"
+		,"Hertha BSC|Hertha BSC"
+		,"VfL Wolfsburg|VfL Wolfsburg"
+		,"SV Werder Bremen|SV Werder Bremen"
+		,"FSV Mainz 05|FSV Mainz 05"
+		,"FC Augsburg|FC Augsburg"
+		,"Borussia Mönchengladbach|Borussia Mönchengladbach"
+		,"Eintracht Frankfurt|Eintracht Frankfurt"
+		,"TSV Fortuna 95 Düsseldorf|TSV Fortuna 95 Düsseldorf"
+		,"FC Union Berlin|FC Union Berlin"
+		,"SC Paderborn 07|SC Paderborn 07"
+		,"RB Leipzig|RB Leipzig"
+	
+		];
+	}
+
+
+
+
+
+		else if(s1.value == "Primeira_Liga"){
+
+		var optionArray = ["|","Rio Ave FC|Rio Ave FC","Sporting Clube de Portugal|Sporting Clube de Portugal"
+		,"FC Porto|FC Porto"
+		,"FC Paços de Ferreira|FC Paços de Ferreira"
+		,"Moreirense FC|Moreirense FC"
+		,"Boavista FC|Boavista FC"
+		,"CD Tondela|CD Tondela"
+		,"Sport Lisboa e Benfica|Sport Lisboa e Benfica"
+		,"CD Santa Clara|CD Santa Clara"
+		,"FC Famalicão|FC Famalicão"
+		,"Gil Vicente FC|Gil Vicente FC"
+		,"Vitória SC|Vitória SC"
+		,"CD Aves|CD Aves"
+		,"Os Belenenses Futebol|Os Belenenses Futebol"
+		,"CS Marítimo|CS Marítimo"
+		,"Portimonense SC|Portimonense SC"
+		,"Sporting Clube de Braga|Sporting Clube de Braga"
+		,"Vitória FC|Vitória FC"
+
+
+
+
+		];
+	}
+		else if(s1.value == "Primera_Division"){
+
+		var optionArray = ["|","Athletic Club|Athletic Club"
+		,"Club Atlético de Madrid|Club Atlético de Madrid"
+		,"CA Osasuna|CA Osasuna"
+		,"RCD Espanyol de Barcelona|RCD Espanyol de Barcelona"
+		,"FC Barcelona|FC Barcelona"
+		,"Getafe CF|Getafe CF"
+		,"Granada CF|Granada CF"
+		,"Real Madrid CF|Real Madrid CF"
+		,"Levante UD|Levante UD"
+		,"RCD Mallorca|RCD Mallorca"
+		,"Real Betis Balompié|Real Betis Balompié"
+		,"Real Sociedad de Fútbol|Real Sociedad de Fútbol"
+		,"Villarreal CF|Villarreal CF"
+		,"Valencia CF|Valencia CF"
+		,"Real Valladolid CF|Real Valladolid CF"
+		,"Deportivo Alavés|Deportivo Alavés"
+		,"SD Eibar|SD Eibar"
+		,"RC Celta de Vigo|RC Celta de Vigo"
+		,"Sevilla FC|Sevilla FC"
+		,"CD Leganés|CD Leganés"
+		];
+	}
+
+
+
+
+
+		else if(s1.value == "Serie_A"){
+
+		var optionArray = ["|","AC Milan|AC Milan"
+		,"ACF Fiorentina|ACF Fiorentina"
+		,"AS Roma|AS Roma"
+		,"Atalanta BC|Atalanta BC"
+		,"Bologna FC 1909|Bologna FC 1909"
+		,"Cagliari Calcio|Cagliari Calcio"
+		,"Genoa CFC|Genoa CFC"
+		,"FC Internazionale Milano|FC Internazionale Milano"
+		,"Juventus FC|Juventus FC"
+		,"SS Lazio|SS Lazio"
+		,"Parma Calcio 1913|Parma Calcio 1913"
+		,"SSC Napoli|SSC Napoli"
+		,"Udinese Calcio|Udinese Calcio"
+		,"Brescia Calcio|Brescia Calcio"
+		,"Hellas Verona FC|Hellas Verona FC"
+		,"US Sassuolo Calcio|US Sassuolo Calcio"
+		,"UC Sampdoria|UC Sampdoria"
+		,"Torino FC|Torino FC"
+		,"SPAL 2013|SPAL 2013"
+		,"US Lecce|US Lecce"
+
+
+
+		];
+	}
+
+
+
+
+
+		else if(s1.value == "European_Championship"){
+
+		var optionArray = ["|","Germany|Germany"
+		,"Spain|Spain"
+		,"Portugal|Portugal"
+		,"England|England"
+		,"France|France"
+		,"Denmark|Denmark"
+		,"Italy|Italy"
+		,"Switzerland|Switzerland"
+		,"Ukraine|Ukraine"
+		,"Sweden|Sweden"
+		,"Poland|Poland"
+		,"Czech Republic|Czech Republic"
+		,"Croatia|Croatia"
+		,"Turkey|Turkey"
+		,"Belgium|Belgium"
+		,"Russia|Russia"
+		,"Austria|Austria"
+		,"Wales|Wales"
+		,"Finland|Finland"
+		,"Netherlands|Netherlands"
+
+		];
+	}
+
+
+
+
+		else if(s1.value == "Eredivisie"){
+
+		var optionArray = ["|","FC Twente '65|FC Twente '65"
+		,"VVV Venlo|VVV Venlo"
+		,"Heracles Almelo|Heracles Almelo"
+		,"Willem II Tilburg|Willem II Tilburg"
+		,"SC Heerenveen|SC Heerenveen"
+		,"PSV|PSV"
+		,"Feyenoord Rotterdam|Feyenoord Rotterdam"
+		,"FC Utrecht|FC Utrecht"
+		,"FC Groningen|FC Groningen"
+		,"AFC Ajax|AFC Ajax"
+		,"SBV Vitesse|SBV Vitesse"
+		,"ADO Den Haag|ADO Den Haag"
+		,"AZ|AZ"
+		,"RKC Waalwijk|RKC Waalwijk"
+		,"PEC Zwolle|PEC Zwolle"
+		,"FC Emmen|FC Emmen"
+		,"Fortuna Sittard|Fortuna Sittard"
+		,"Sparta Rotterdam|Sparta Rotterdam"
+	
+
+
+		];
+	}
+
+
+else if(s1.value == "Serie_B"){
+
+		var optionArray = ["|","Fluminense FC|Fluminense FC"
+		,"CA Mineiro|CA Mineiro"
+		,"Grêmio FBPA|Grêmio FBPA"
+		,"CA Paranaense|CA Paranaense"
+		,"SE Palmeiras|SE Palmeiras"
+		,"Botafogo FR|Botafogo FR"
+		,"Cruzeiro EC|Cruzeiro EC"
+		,"Chapecoense AF|Chapecoense AF"
+		,"Avaí FC|Avaí FC"
+		,"São Paulo FC|São Paulo FC"
+		,"EC Bahia|EC Bahia"
+		,"SC Corinthians Paulista|SC Corinthians Paulista"
+		,"CR Vasco da Gama|CR Vasco da Gama"
+		,"CR Flamengo|CR Flamengo"
+		,"Ceará SC|Ceará SC"
+		,"Fortaleza EC|Fortaleza EC"
+		,"CS Alagoano|CS Alagoano"
+		,"Goiás EC|Goiás EC"
+		,"SC Internacional|SC Internacional"
+		,"Santos FC|Santos FC"
+
+
+
+		];
+	}
+
+else if(s1.value == "Competition"){
+
+		var optionArray = ["Team|Team"
+		
+
+
+		];
+	}
+
+
+
+
+
+
+
+
+
+	for(var option in optionArray){
+		var pair = optionArray[option].split("|");
+		var newOption = document.createElement("option");
+		newOption.value = pair[0];
+		newOption.innerHTML = pair[1];
+		s2.options.add(newOption);
+	}
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
