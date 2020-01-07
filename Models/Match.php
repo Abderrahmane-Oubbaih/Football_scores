@@ -1,8 +1,11 @@
 <?php
+<<<<<<< HEAD
 
 require_once("Connexion.php");
 
-class Match 
+
+class Match
+
 {
     private $id;
     private $homeTeam;
@@ -97,6 +100,7 @@ class Match
         return  $this->id . " " .$this->homeTeam." ".$this->awayTeam ." ". $this->homeTeamLogo
         ." ". $this->awayTeamLogo." ".$this->homeTeamScore." ".$this->awayTeamScore." ".$this->status." ".$this->_date." ".$this->_time." ".$this->winner." ".$this->competition;
     }
+
     /*
    public function getMatchForAllCompetitionAndForChosenDate($Date)
     {
@@ -117,6 +121,17 @@ class Match
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
             $data[$i] = curl_exec($curl);}
+=======
+   public function getMatches()
+    {
+            $api_key = '66485d1780504493a4cfc5527ac4d4c4';
+            $headers = array('X-Auth-Token: '.$api_key);
+            $curl = curl_init("http://api.football-data.org/v2/matches");
+            curl_setopt($curl,CURLOPT_SSL_VERIFYPEER,false);
+            curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            $data=curl_exec($curl);
+>>>>>>> 4555a4a040dc658c14a702e5cee7ad40c7be7d19
             if($data === false)
             {
                 var_dump(curl_error($curl));
@@ -182,6 +197,7 @@ class Match
         
                 return $arrMatch ;
                 }
+<<<<<<< HEAD
                  
             }
             curl_close($curl);
@@ -354,5 +370,12 @@ class Match
        
     
     
-}}
+
+
+                   
+            }
+            curl_close($curl);
+}
+
+
 ?>
