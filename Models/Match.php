@@ -1,5 +1,5 @@
 <?php
-<<<<<<< HEAD
+
 
 require_once("Connexion.php");
 
@@ -315,66 +315,66 @@ class Match
                 else
                 {
                     
-                    $arrMatch = array();
-                    $date;
-                    $time;
-                    $homeTeamLogo;
-                    $awayTeamLogo;
-                    //echo $data;
-                    
-                     
-                     
-                     $bdd = Connexion::dbConnexion();
-                     print_r($bdd);
-                     for($i=0;$i<$result["count"];$i++)
-                     {
-                      //  echo $result["matches"][$i]["homeTeam"]["name"]; echo '</br>';
-                       
-                        
-        
-                        
-                        $req = $bdd->prepare('SELECT * FROM tbl_team WHERE Name = ?');
-                        $req->execute(array($result["matches"][$i]["homeTeam"]["name"]));
-                        //echo $req->rowCount();
-                         if($req->rowCount()>0)
-                         {
-                            while($d = $req->fetch())
-                            {
-                                $homeTeamLogo = $d["Logo"];
-                            }
-                            $req->closeCursor();
-                         } else{$homeTeamLogo = "pas encore dans la bd";}
-                       
-                        //echo $result["matches"][$i]["homeTeam"]["name"];
-                    
-                       $req = $bdd->prepare('SELECT * from tbl_team where Name = ?');
-                       $req->execute(array($result["matches"][$i]["awayTeam"]["name"]));
-                         if($req->rowCount()>0)
-                         {
-                              while($d = $req->fetch())
-                              {
-                                $awayTeamLogo = $d["Logo"];
-                              }
-                              $req->closeCursor();
-                         }else{$awayTeamLogo = "pas encore dans la bd";}
-                        
-                        $utcSeconds = strtotime($result["matches"][$i]["utcDate"]);
-                        $time = date('H:i',$utcSeconds);
-                        $date = date('d-m-Y',$utcSeconds);
-                        $arrMatch[$i] = new Match($result["matches"][$i]["homeTeam"]["name"],$result["matches"][$i]["awayTeam"]["name"],$result["matches"][$i]["status"],$homeTeamLogo,$awayTeamLogo,$result["matches"][$i]["score"]["fullTime"]["homeTeam"],$result["matches"][$i]["score"]["fullTime"]["awayTeam"],$date,$time,$result["matches"][$i]["competition"]["name"],$result["matches"][$i]["score"]["winner"]);
-                     }
-                   
-                      //$result["matches"][$i]["competition"]["name"];
-                 return $arrMatch ;
-                }
+                            $arrMatch = array();
+                            $date;
+                            $time;
+                            $homeTeamLogo;
+                            $awayTeamLogo;
+                            //echo $data;
+
+
+
+                             $bdd = Connexion::dbConnexion();
+                             
+                             for($i=0;$i<$result["count"];$i++)
+                             {
+                              //  echo $result["matches"][$i]["homeTeam"]["name"]; echo '</br>';
+
+
+
+
+                                $req = $bdd->prepare('SELECT * FROM tbl_team WHERE Name = ?');
+                                $req->execute(array($result["matches"][$i]["homeTeam"]["name"]));
+                                //echo $req->rowCount();
+                                 if($req->rowCount()>0)
+                                 {
+                                    while($d = $req->fetch())
+                                    {
+                                        $homeTeamLogo = $d["Logo"];
+                                    }
+                                    $req->closeCursor();
+                                 } else{$homeTeamLogo = "pas encore dans la bd";}
+
+                                //echo $result["matches"][$i]["homeTeam"]["name"];
+
+                               $req = $bdd->prepare('SELECT * from tbl_team where Name = ?');
+                               $req->execute(array($result["matches"][$i]["awayTeam"]["name"]));
+                                 if($req->rowCount()>0)
+                                 {
+                                      while($d = $req->fetch())
+                                      {
+                                        $awayTeamLogo = $d["Logo"];
+                                      }
+                                      $req->closeCursor();
+                                 }else{$awayTeamLogo = "pas encore dans la bd";}
+
+                                $utcSeconds = strtotime($result["matches"][$i]["utcDate"]);
+                                $time = date('H:i',$utcSeconds);
+                                $date = date('d-m-Y',$utcSeconds);
+                                $arrMatch[$i] = new Match($result["matches"][$i]["homeTeam"]["name"],$result["matches"][$i]["awayTeam"]["name"],$result["matches"][$i]["status"],$homeTeamLogo,$awayTeamLogo,$result["matches"][$i]["score"]["fullTime"]["homeTeam"],$result["matches"][$i]["score"]["fullTime"]["awayTeam"],$date,$time,$result["matches"][$i]["competition"]["name"],$result["matches"][$i]["score"]["winner"]);
+                             }
+
+                              //$result["matches"][$i]["competition"]["name"];
+                         return $arrMatch ;
+                   }
        
     
     
 
-
+              
                    
             }
-            curl_close($curl);
+            
 }
 
 
