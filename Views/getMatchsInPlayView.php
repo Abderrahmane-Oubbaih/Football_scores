@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<?php require_once("Controllers/getMatchsInPlay.php"); ?>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    
-</head>
-<body>
+
   <?php ob_start();?>
    <h1>FOTSCOR</h1>
    <h1>Les matchs D'aujourd'hui en cours :</h1>
@@ -47,5 +39,3 @@
             border-collapse: collapse;
         }
     </style>
-</body>
-</html>

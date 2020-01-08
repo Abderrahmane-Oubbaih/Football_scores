@@ -17,19 +17,19 @@ for($i=0;$i<$result2["count"];$i++)
         echo '</br>';
 }*/
 $result3 = Competition::getStandings("PL");
-echo '<br>';
+print_r($result3);
 
-for($i=0;$i<count($result3["standings"][0]["table"]);$i++){
-    echo $result3["standings"][0]["table"][$i]["team"]["name"].'<br>';
-}
+//for($i=0;$i<count($result3["standings"][0]["table"]);$i++){
+  //  echo $result3["standings"][0]["table"][$i]["team"]["name"].'<br>';
+//}
 /*$result = Match::getMatchsInPlay();
 if( $result == "false")
         echo false ;
 else
        print_r($result) ;*/
 
-$result = Competition::getMatchsInPlay('SA');
-echo count($result);
+//$result = Competition::getMatchsInPlay('SA');
+//echo count($result);
 
 
 ?>

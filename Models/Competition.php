@@ -2,6 +2,7 @@
 <?php
 
 require_once('Match.php');
+require_once('Standings.php');
 
 class Competition
 {
@@ -145,9 +146,28 @@ class Competition
                 $result = json_decode($data,true);
             }
        curl_close($curl);
-
-
-       return $result;
+        $standingArray = array();
+        for($i=0;$i<count($result["standings"][0]["table"]);$i++){
+            $standingArray[$i] = new Standing(
+                $result["standings"][0]["table"][$i]["team"]["name"],
+                $result["standings"][0]["table"][$i]["position"],
+                $result["standings"][0]["table"][$i]["playedGames"],
+                $result["standings"][0]["table"][$i]["won"],
+                $result["standings"][0]["table"][$i]["draw"],
+                $result["standings"][0]["table"][$i]["lost"],
+                $result["standings"][0]["table"][$i]["points"],
+                $result["standings"][0]["table"][$i]["goalsFor"],
+                $result["standings"][0]["table"][$i]["goalsAgainst"],
+                $result["standings"][0]["table"][$i]["goalDifference"]
+            );
+        }
+        $standingsIncetance = new Standings(
+        $result["competition"]["name"],
+        $result["season"]["currentMatchday"],
+        $standingArray
+        );
+        return $standingsIncetance;
+       //return $result;
     }
      
 }

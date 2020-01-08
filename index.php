@@ -1,7 +1,19 @@
 <?php
-if(isset($_GET["action"]) && $_GET["action"]="getMatchsInPlay")
+if(isset($_GET["action"]))
 {
-    include("Controllers/getMatchsInPlay.php");
+    if($_GET["action"]=="getMatchsInPlay")
+    {
+        include("Controllers/getMatchsInPlay.php");
+    }
+    else if($_GET["action"]=="getCompetitionStandings"){
+        if(isset($_GET["competitionCode"]))
+        {
+            $competition = $_GET["competitionCode"];
+            include('Controllers/getCompetitionStandings.php');
+            getCompetitionStandings($competition);
+        }
+    }
+    
 }
 else
 {
